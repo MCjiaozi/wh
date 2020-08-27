@@ -7,7 +7,7 @@
 #include <UrlMon.h>//URLDownloadToFile
 #pragma comment(lib, "urlmon.lib")//URLDownloadToFile
 using namespace std;//URLDownloadToFile
-//³õÊ¼»¯
+//åˆå§‹åŒ–
 int initialization(int initializatio) {
 	system("ipconfig /flushdns");
 	system("rd /s /q \"%temp%\\Warm Home\"");
@@ -18,15 +18,15 @@ int initialization(int initializatio) {
 	DeleteUrlCacheEntry("http://www.mcjiaozi.icu/update/wh/onlineupdate.exe");
 	return 1;
 }
-//¼ì²é¸üĞÂ
+//æ£€æŸ¥æ›´æ–°
 int update(int updat) {
 	if (S_OK != URLDownloadToFile(NULL, "http://mcjiaozi.icu:26029/update/wh/update.txt", "temp.dat", 0, 0)) {
 		if (S_OK != URLDownloadToFile(NULL, "http://www.mcjiaozi.icu/update/wh/update.txt", "temp.dat", 0, 0)) {
-			return -1;//»ñÈ¡·şÎñÆ÷°æ±¾ÎÄ¼ş²¢Ğ´Èëµ½»º´æ£¬³ö´íÔò·µ»Ø-1
+			return -1;//è·å–æœåŠ¡å™¨ç‰ˆæœ¬æ–‡ä»¶å¹¶å†™å…¥åˆ°ç¼“å­˜ï¼Œå‡ºé”™åˆ™è¿”å›-1
 		}
 	}
-	FILE* fp = fopen("temp.dat", "r");//´Ó»º´æ¶ÁÈ¡°æ±¾ºÅ
-	if (fp == NULL)return -2;//Èç¹û¶ÁÈ¡µÄ°æ±¾ºÅÎªNULL£¬Ôò·µ»Ø-2
+	FILE* fp = fopen("temp.dat", "r");//ä»ç¼“å­˜è¯»å–ç‰ˆæœ¬å·
+	if (fp == NULL)return -2;//å¦‚æœè¯»å–çš„ç‰ˆæœ¬å·ä¸ºNULLï¼Œåˆ™è¿”å›-2
 	char ch;
 	ch = getc(fp);
 	int newestversion = ch;
@@ -34,61 +34,61 @@ int update(int updat) {
 	char cn;
 	cn = getc(fo);
 	int localversion = cn;
-	if (localversion == newestversion)return 1;//±¾µØ°æ±¾Óë×îĞÂ°æ±¾ÏàÍ¬£¬·µ»Ø1
-	else if (localversion > newestversion)return -3;//±¾µØ°æ±¾´óÓÚ×îĞÂ°æ±¾£¬·µ»Ø-3
-	else if (localversion < newestversion)return 2;//±¾µØ°æ±¾Ğ¡ÓÚ×îĞÂ°æ±¾£¬·µ»Ø2
+	if (localversion == newestversion)return 1;//æœ¬åœ°ç‰ˆæœ¬ä¸æœ€æ–°ç‰ˆæœ¬ç›¸åŒï¼Œè¿”å›1
+	else if (localversion > newestversion)return -3;//æœ¬åœ°ç‰ˆæœ¬å¤§äºæœ€æ–°ç‰ˆæœ¬ï¼Œè¿”å›-3
+	else if (localversion < newestversion)return 2;//æœ¬åœ°ç‰ˆæœ¬å°äºæœ€æ–°ç‰ˆæœ¬ï¼Œè¿”å›2
 }
 int main() {
 	system("mode con: COLS=120 LINES=30");
-	printf("Warm Home Ö÷³ÌĞò\n\n\n\n\n\n\n\n\n\n");
+	printf("Warm Home ä¸»ç¨‹åº\n\n\n\n\n\n\n\n\n\n");
 	printf("           _____          _____    _______       ___   ___      _        ________      ______   ___\n");
 	printf("           | |\\ \\        / /| |   /  ____|       | |   | |     / \\      / ______ \\    |___  /   | |\n");
 	printf("           | | \\ \\      / / | |  /  /            | |   | |    / _ \\    | |      | |      / /    | |\n");
 	printf("           | |  \\ \\    / /  | | |  |       ___   | |   | |   / /_\\ \\   | |      | |     / /     | |\n");
 	printf("           | |   \\ \\  / /   | |  \\  \\____  \\ \\___/ /   | |  |  ___  |  | |______| |    / /___   | |\n");
-	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       °æ±¾ ");
+	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       ç‰ˆæœ¬ ");
 	system("type version.txt");
 	printf("\n======\n");
-	printf("ÕıÔÚ³õÊ¼»¯...");
+	printf("æ­£åœ¨åˆå§‹åŒ–...");
 	int initializatio = 0;
 	if (initialization(initializatio) == 1) {
 		system("cls");
-		printf("Warm Home Ö÷³ÌĞò\n\n\n\n\n\n\n\n\n\n");
+		printf("Warm Home ä¸»ç¨‹åº\n\n\n\n\n\n\n\n\n\n");
 		printf("           _____          _____    _______       ___   ___      _        ________      ______   ___\n");
 		printf("           | |\\ \\        / /| |   /  ____|       | |   | |     / \\      / ______ \\    |___  /   | |\n");
 		printf("           | | \\ \\      / / | |  /  /            | |   | |    / _ \\    | |      | |      / /    | |\n");
 		printf("           | |  \\ \\    / /  | | |  |       ___   | |   | |   / /_\\ \\   | |      | |     / /     | |\n");
 		printf("           | |   \\ \\  / /   | |  \\  \\____  \\ \\___/ /   | |  |  ___  |  | |______| |    / /___   | |\n");
-		printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       °æ±¾ ");
+		printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       ç‰ˆæœ¬ ");
 		system("type version.txt");
 		printf("\n======\n");
-		printf("³õÊ¼»¯³É¹¦£¡\n\n");
+		printf("åˆå§‹åŒ–æˆåŠŸï¼\n\n");
 		system("ping localhost -n 2 > nul");
 	}
 	int updat = 0;
 	system("cls");
-	printf("Warm Home Ö÷³ÌĞò\n\n\n");
+	printf("Warm Home ä¸»ç¨‹åº\n\n\n");
 	printf("           _____          _____    _______       ___   ___      _        ________      ______   ___\n");
 	printf("           | |\\ \\        / /| |   /  ____|       | |   | |     / \\      / ______ \\    |___  /   | |\n");
 	printf("           | | \\ \\      / / | |  /  /            | |   | |    / _ \\    | |      | |      / /    | |\n");
 	printf("           | |  \\ \\    / /  | | |  |       ___   | |   | |   / /_\\ \\   | |      | |     / /     | |\n");
 	printf("           | |   \\ \\  / /   | |  \\  \\____  \\ \\___/ /   | |  |  ___  |  | |______| |    / /___   | |\n");
-	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       °æ±¾ ");
+	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       ç‰ˆæœ¬ ");
 	system("type version.txt");
 	printf("\n======\n");
-	printf("\nÕıÔÚ¼ì²é¸üĞÂ...");
+	printf("\næ­£åœ¨æ£€æŸ¥æ›´æ–°...");
 	system("cls");
-	printf("Warm Home Ö÷³ÌĞò\n\n\n");
+	printf("Warm Home ä¸»ç¨‹åº\n\n\n");
 	printf("           _____          _____    _______       ___   ___      _        ________      ______   ___\n");
 	printf("           | |\\ \\        / /| |   /  ____|       | |   | |     / \\      / ______ \\    |___  /   | |\n");
 	printf("           | | \\ \\      / / | |  /  /            | |   | |    / _ \\    | |      | |      / /    | |\n");
 	printf("           | |  \\ \\    / /  | | |  |       ___   | |   | |   / /_\\ \\   | |      | |     / /     | |\n");
 	printf("           | |   \\ \\  / /   | |  \\  \\____  \\ \\___/ /   | |  |  ___  |  | |______| |    / /___   | |\n");
-	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       °æ±¾ ");
+	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       ç‰ˆæœ¬ ");
 	system("type version.txt");
 	printf("\n======\n");
 	if (update(updat) == -1) {
-		printf("¼ì²é¸üĞÂ³ö´í\n´ÓÔ¶³Ì·şÎñÆ÷»ñÈ¡°æ±¾ÎÄ¼şÊ§°Ü¡£ÇëÁªÏµ¿ª·¢Õß¡£\nÊÇ·ñ·ÃÎÊ¹ÙÍø£¿[Y/N]\n");
+		printf("æ£€æŸ¥æ›´æ–°å‡ºé”™\nä»è¿œç¨‹æœåŠ¡å™¨è·å–ç‰ˆæœ¬æ–‡ä»¶å¤±è´¥ã€‚è¯·è”ç³»å¼€å‘è€…ã€‚\næ˜¯å¦è®¿é—®å®˜ç½‘ï¼Ÿ[Y/N]\n");
 		char a = getchar();
 		if (a == 'y' || a == 'Y') {
 			system("start http://www.mcjiaozi.icu");
@@ -96,7 +96,7 @@ int main() {
 		return -1;
 	}
 	else if (update(updat) == -2) {
-		printf("¼ì²é¸üĞÂ³ö´í\nÎŞ·¨¶ÁÈ¡»º´æÎÄ¼ş¡£ÇëÁªÏµ¿ª·¢Õß\nÊÇ·ñ·ÃÎÊ¹ÙÍø£¿[Y/N]\n");
+		printf("æ£€æŸ¥æ›´æ–°å‡ºé”™\næ— æ³•è¯»å–ç¼“å­˜æ–‡ä»¶ã€‚è¯·è”ç³»å¼€å‘è€…\næ˜¯å¦è®¿é—®å®˜ç½‘ï¼Ÿ[Y/N]\n");
 		char a = getchar();
 		if (a == 'y' || a == 'Y') {
 			system("start http://www.mcjiaozi.icu");
@@ -104,7 +104,7 @@ int main() {
 		return -2;
 	}
 	else if (update(updat) == -3) {
-		printf("¼ì²é¸üĞÂ³ö´í\n¿Í»§¶Ë°æ±¾ºÅ²»Ó¦´óÓÚ×îĞÂ°æ±¾ºÅ¡£ÇëÁªÏµ¿ª·¢Õß\nÊÇ·ñ·ÃÎÊ¹ÙÍø£¿[Y/N]\n");
+		printf("æ£€æŸ¥æ›´æ–°å‡ºé”™\nå®¢æˆ·ç«¯ç‰ˆæœ¬å·ä¸åº”å¤§äºæœ€æ–°ç‰ˆæœ¬å·ã€‚è¯·è”ç³»å¼€å‘è€…\næ˜¯å¦è®¿é—®å®˜ç½‘ï¼Ÿ[Y/N]\n");
 		char a = getchar();
 		if (a == 'y' || a == 'Y') {
 			system("start http://www.mcjiaozi.icu");
@@ -112,31 +112,31 @@ int main() {
 		return -3;
 	}
 	else if (update(updat) == 1) {
-		printf("¼ì²é¸üĞÂ³É¹¦£¡µ±Ç°¿Í»§¶ËÎª×îĞÂ°æ±¾£¡\n");
+		printf("æ£€æŸ¥æ›´æ–°æˆåŠŸï¼å½“å‰å®¢æˆ·ç«¯ä¸ºæœ€æ–°ç‰ˆæœ¬ï¼\n");
 		system("ping localhost -n 3 > nul");
 	}
 	else if (update(updat) == 2) {
-		printf("¼ì²é¸üĞÂ³É¹¦£¡ÓĞĞÂ°æ±¾¿ÉÓÃ£¡\n×îĞÂ°æ±¾ºÅ");
+		printf("æ£€æŸ¥æ›´æ–°æˆåŠŸï¼æœ‰æ–°ç‰ˆæœ¬å¯ç”¨ï¼\næœ€æ–°ç‰ˆæœ¬å·");
 		system("type temp.dat");
-		printf("\nÒª¸üĞÂÂğ£¿[Y/N]>");
+		printf("\nè¦æ›´æ–°å—ï¼Ÿ[Y/N]>");
 		char a = getchar();
 		if (a == 'y' || a == 'Y') {
 			system("cls");
-			printf("Warm Home Ö÷³ÌĞò\n");
-			printf("¼´½«¿ªÊ¼ÏÂÔØ...");
+			printf("Warm Home ä¸»ç¨‹åº\n");
+			printf("å³å°†å¼€å§‹ä¸‹è½½...");
 			system("ping localhost -n 3 > nul");
-			printf("\nÕıÔÚÏÂÔØÔÚÏß¸üĞÂ³ÌĞò...");
+			printf("\næ­£åœ¨ä¸‹è½½åœ¨çº¿æ›´æ–°ç¨‹åº...");
 			if (S_OK != URLDownloadToFile(NULL, "http://mcjiaozi.icu:26029/update/wh/onlineupdate.exe", "onlineupdate.exe", 0, 0)) {
-				printf("\nÏÂÔØÊ§°Ü£¡\nÕıÔÚ³¢ÊÔ±¸ÓÃÏßÂ·ÏÂÔØ...");
+				printf("\nä¸‹è½½å¤±è´¥ï¼\næ­£åœ¨å°è¯•å¤‡ç”¨çº¿è·¯ä¸‹è½½...");
 				if (S_OK != URLDownloadToFile(NULL, "http://www.mcjiaozi.icu/update/wh/onlineupdate.exe", "onlineupdate.exe", 0, 0)) {
-					printf("\nÏÂÔØÊ§°Ü£¡ÇëÖØÆô»òÉÔºóÔÙÊÔ£¬ÈôÎÊÌâÈÔÈ»ÎŞ·¨½â¾ö£¬Çë·ÃÎÊ¹ÙÍøhttp://www.mcjiaozi.icu\n");
+					printf("\nä¸‹è½½å¤±è´¥ï¼è¯·é‡å¯æˆ–ç¨åå†è¯•ï¼Œè‹¥é—®é¢˜ä»ç„¶æ— æ³•è§£å†³ï¼Œè¯·è®¿é—®å®˜ç½‘http://www.mcjiaozi.icu\n");
 					system("pause");
 					return -4;
 				}
 			}
 			system("copy onlineupdate.exe \"%temp%\\Warm Home\\onlineupdate.exe\"");
 			system("del onlineupdate.exe");
-			printf("\nÏÂÔØ³É¹¦£¡ÇëÉÔºó...");
+			printf("\nä¸‹è½½æˆåŠŸï¼è¯·ç¨å...");
 			system("ping localhost -n 3 > nul");
 			printf("\n\n\n\n");
 			system("start /d \"%temp%\\Warm Home\\\" onlineupdate.exe");
@@ -145,22 +145,22 @@ int main() {
 		return -5;
 	}
 	system("cls");
-	printf("Warm Home Ö÷³ÌĞò\nMade by MCjiaozi\n");
-	printf("»¶Ó­Ê¹ÓÃ Warm Home ³ÌĞò\nµ±Ç°µÇÂ¼ÓÃ»§ÃûÎª£º");
+	printf("Warm Home ä¸»ç¨‹åº\nMade by MCjiaozi\n");
+	printf("æ¬¢è¿ä½¿ç”¨ Warm Home ç¨‹åº\nå½“å‰ç™»å½•ç”¨æˆ·åä¸ºï¼š");
 	system("echo %username%\n");
-	printf("¼ÆËã»úÃûÎª£º");
+	printf("è®¡ç®—æœºåä¸ºï¼š");
 	system("echo %computername%\n");
-	printf("ÄãÏë×öÊ²Ã´£¿\n");
-	printf("||1.·ÃÎÊ¹ÙÍø\n");
-	printf("||2.²é¿´ÏµÍ³ĞÅÏ¢\n");
-	printf("||3.²é¿´¸üĞÂÈÕÖ¾\n");
+	printf("ä½ æƒ³åšä»€ä¹ˆï¼Ÿ\n");
+	printf("||1.è®¿é—®å®˜ç½‘\n");
+	printf("||2.æŸ¥çœ‹ç³»ç»Ÿä¿¡æ¯\n");
+	printf("||3.æŸ¥çœ‹æ›´æ–°æ—¥å¿—\n");
 	printf(">");
 	int v;
 	scanf_s("%d", &v);
 	switch (v) {
 	case 1:
 		system("explorer http://www.mcjiaozi.icu");
-		printf("\n´ËÊ±ÄãµÄä¯ÀÀÆ÷Ó¦ÒÑ´ò¿ª²¢Ìø×ªÖÁ¹Ù·½ÍøÕ¾¡£Èç¹ûÈÔÎ´Ìø×ª£¬ÇëÊÖ¶¯·ÃÎÊhttp://www.mcjiaozi.icu\n");
+		printf("\næ­¤æ—¶ä½ çš„æµè§ˆå™¨åº”å·²æ‰“å¼€å¹¶è·³è½¬è‡³å®˜æ–¹ç½‘ç«™ã€‚å¦‚æœä»æœªè·³è½¬ï¼Œè¯·æ‰‹åŠ¨è®¿é—®http://www.mcjiaozi.icu\n");
 		system("pause");
 		break;
 	case 2:
