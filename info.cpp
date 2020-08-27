@@ -2,5 +2,5 @@
 int main(){
 	system("systeminfo");
 	system("pause");
-  return 0;
+	return 0;
 }
