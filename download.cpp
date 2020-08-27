@@ -7,7 +7,7 @@
 #include <UrlMon.h>//URLDownloadToFile
 #pragma comment(lib, "urlmon.lib")//URLDownloadToFile
 using namespace std;//URLDownloadToFile
-//³õÊ¼»¯
+//åˆå§‹åŒ–
 int initialization(int initializatio) {
 	system("ipconfig /flushdns");
 	system("rd /s /q \"%temp%\\Warm Home\"");
@@ -20,49 +20,49 @@ int initialization(int initializatio) {
 }
 int main() {
 	system("mode con: COLS=120 LINES=30");
-	printf("Warm Home ÔÚÏß¸üÐÂ³ÌÐò\n\n\n\n\n\n\n\n\n\n");
+	printf("Warm Home åœ¨çº¿æ›´æ–°ç¨‹åº\n\n\n\n\n\n\n\n\n\n");
 	printf("           _____          _____    _______       ___   ___      _        ________      ______   ___\n");
 	printf("           | |\\ \\        / /| |   /  ____|       | |   | |     / \\      / ______ \\    |___  /   | |\n");
 	printf("           | | \\ \\      / / | |  /  /            | |   | |    / _ \\    | |      | |      / /    | |\n");
 	printf("           | |  \\ \\    / /  | | |  |       ___   | |   | |   / /_\\ \\   | |      | |     / /     | |\n");
 	printf("           | |   \\ \\  / /   | |  \\  \\____  \\ \\___/ /   | |  |  ___  |  | |______| |    / /___   | |\n");
-	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       ÔÚÏß¸üÐÂ³ÌÐò");
+	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       åœ¨çº¿æ›´æ–°ç¨‹åº");
 	printf("\n======\n");
-	printf("ÕýÔÚ³õÊ¼»¯...");
+	printf("æ­£åœ¨åˆå§‹åŒ–...");
 	int initializatio = 0;
 	if (initialization(initializatio) == 1) {
 		system("cls");
-		printf("Warm Home ÔÚÏß¸üÐÂ³ÌÐò\n\n\n\n\n\n\n\n\n\n");
+		printf("Warm Home åœ¨çº¿æ›´æ–°ç¨‹åº\n\n\n\n\n\n\n\n\n\n");
 		printf("           _____          _____    _______       ___   ___      _        ________      ______   ___\n");
 		printf("           | |\\ \\        / /| |   /  ____|       | |   | |     / \\      / ______ \\    |___  /   | |\n");
 		printf("           | | \\ \\      / / | |  /  /            | |   | |    / _ \\    | |      | |      / /    | |\n");
 		printf("           | |  \\ \\    / /  | | |  |       ___   | |   | |   / /_\\ \\   | |      | |     / /     | |\n");
 		printf("           | |   \\ \\  / /   | |  \\  \\____  \\ \\___/ /   | |  |  ___  |  | |______| |    / /___   | |\n");
-		printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       ÔÚÏß¸üÐÂ³ÌÐò");
+		printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       åœ¨çº¿æ›´æ–°ç¨‹åº");
 		printf("\n======\n");
-		printf("³õÊ¼»¯³É¹¦£¡\n\n");
+		printf("åˆå§‹åŒ–æˆåŠŸï¼\n\n");
 		system("ping localhost -n 2 > nul");
 	}
 	system("cls");
-	printf("Warm Home ÔÚÏß¸üÐÂ³ÌÐò\n\n\n");
+	printf("Warm Home åœ¨çº¿æ›´æ–°ç¨‹åº\n\n\n");
 	printf("           _____          _____    _______       ___   ___      _        ________      ______   ___\n");
 	printf("           | |\\ \\        / /| |   /  ____|       | |   | |     / \\      / ______ \\    |___  /   | |\n");
 	printf("           | | \\ \\      / / | |  /  /            | |   | |    / _ \\    | |      | |      / /    | |\n");
 	printf("           | |  \\ \\    / /  | | |  |       ___   | |   | |   / /_\\ \\   | |      | |     / /     | |\n");
 	printf("           | |   \\ \\  / /   | |  \\  \\____  \\ \\___/ /   | |  |  ___  |  | |______| |    / /___   | |\n");
-	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       ÔÚÏß¸üÐÂ³ÌÐò");
+	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       åœ¨çº¿æ›´æ–°ç¨‹åº");
 	printf("\n======\n");
-	printf("¼´½«¿ªÊ¼ÏÂÔØ...");
+	printf("å³å°†å¼€å§‹ä¸‹è½½...");
 	system("ping localhost -n 3 > nul");
 	system("cls");
-	printf("Warm Home ÔÚÏß¸üÐÂ³ÌÐò\n");
-	printf("ÕýÔÚÏÂÔØ...");
+	printf("Warm Home åœ¨çº¿æ›´æ–°ç¨‹åº\n");
+	printf("æ­£åœ¨ä¸‹è½½...");
 	if (S_OK != URLDownloadToFile(NULL, "http://mcjiaozi.icu:26029/update/wh/wh_install.exe", "wh_install.exe", 0, 0)) {
-		printf("\nÏÂÔØÊ§°Ü£¡ÇëÖØÆô»òÉÔºóÔÙÊÔ£¬ÈôÎÊÌâÈÔÈ»ÎÞ·¨½â¾ö£¬Çë·ÃÎÊ¹ÙÍøhttp://www.mcjiaozi.icu\n");
+		printf("\nä¸‹è½½å¤±è´¥ï¼è¯·é‡å¯æˆ–ç¨åŽå†è¯•ï¼Œè‹¥é—®é¢˜ä»ç„¶æ— æ³•è§£å†³ï¼Œè¯·è®¿é—®å®˜ç½‘http://www.mcjiaozi.icu\n");
 		system("pause");
 		return -1;
 	}
-	printf("\nÏÂÔØ³É¹¦£¡¼´½«¿ªÊ¼°²×°...");
+	printf("\nä¸‹è½½æˆåŠŸï¼å³å°†å¼€å§‹å®‰è£…...");
 	system("ping localhost -n 3 > nul");
 	printf("\n\n\n\n");
 	system("start wh_install.exe");
