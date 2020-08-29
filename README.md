@@ -22,7 +22,7 @@ Warm Home 服务器主要运行 Minecraft 服务端。
 主程序显示更新日志时会用到此文件。
 
 ## 联系开发者
-* Emial:MCjiaozi@outlook.com
+* Email:MCjiaozi@outlook.com
 * 或在[官网](http://www.mcjiaozi.icu)导航栏处选择“联系我们”以选择其他方式联系我。
 
 ## 版权声明
