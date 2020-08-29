@@ -1,6 +1,7 @@
+
 #include<windows.h>
-int main(){
+int main() {
 	system("systeminfo");
 	system("pause");
-	return 0;
+	return 1;
 }
