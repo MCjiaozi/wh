@@ -57,7 +57,7 @@ int main() {
 	system("cls");
 	printf("Warm Home 在线更新程序\n");
 	printf("正在下载...");
-	if (S_OK != URLDownloadToFile(NULL, "http://mcjiaozi.icu:26029/update/wh/wh_install.exe", "wh_install.exe", 0, 0)) {
+	if (S_OK != URLDownloadToFile(NULL, "http://mcjiaozi.icu:26029/update/wh/wh_installer.exe", "wh_installer.exe", 0, 0)) {
 		printf("\n下载失败！请重启或稍后再试，若问题仍然无法解决，请访问官网http://www.mcjiaozi.icu\n");
 		system("pause");
 		return -1;
@@ -65,6 +65,6 @@ int main() {
 	printf("\n下载成功！即将开始安装...");
 	system("ping localhost -n 3 > nul");
 	printf("\n\n\n\n");
-	system("start wh_install.exe");
+	system("start wh_installer.exe");
 	return 1;
 }
