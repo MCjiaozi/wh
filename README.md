@@ -1,7 +1,7 @@
 # Warm Home
 ## 开发者
 * 该程序由 我(MCjiaozi) 开发。
-* [点击可访问官方网站](http://www.mcjiaozi.icu)
+* [点击可访问官方网站](https://www.mcjiaozi.icu)
 ## 开发目的
 * 为 Warm Home 服务器开发。
 Warm Home 服务器主要运行 Minecraft 服务端。
