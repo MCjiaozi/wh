@@ -16,12 +16,14 @@ int initialization(int initializatio) {
 	DeleteUrlCacheEntry("http://mcjiaozi.icu:26029/update/wh/onlineupdate.exe");
 	DeleteUrlCacheEntry("http://www.mcjiaozi.icu/update/wh/update.txt");
 	DeleteUrlCacheEntry("http://www.mcjiaozi.icu/update/wh/onlineupdate.exe");
+	DeleteUrlCacheEntry("https://www.mcjiaozi.icu/update/wh/update.txt");
+	DeleteUrlCacheEntry("https://github.com/JinJiaoZi/jinjiaozi.github.io/releases/download/Update/onlineupdate.exe");
 	return 1;
 }
 //检查更新
 int update(int updat) {
 	if (S_OK != URLDownloadToFile(NULL, "http://mcjiaozi.icu:26029/update/wh/update.txt", "temp.dat", 0, 0)) {
-		if (S_OK != URLDownloadToFile(NULL, "http://www.mcjiaozi.icu/update/wh/update.txt", "temp.dat", 0, 0)) {
+		if (S_OK != URLDownloadToFile(NULL, "https://www.mcjiaozi.icu/update/wh/update.txt", "temp.dat", 0, 0)) {
 			return -1;//获取服务器版本文件并写入到缓存，出错则返回-1
 		}
 	}
@@ -46,7 +48,7 @@ int main() {
 	printf("           | | \\ \\      / / | |  /  /            | |   | |    / _ \\    | |      | |      / /    | |\n");
 	printf("           | |  \\ \\    / /  | | |  |       ___   | |   | |   / /_\\ \\   | |      | |     / /     | |\n");
 	printf("           | |   \\ \\  / /   | |  \\  \\____  \\ \\___/ /   | |  |  ___  |  | |______| |    / /___   | |\n");
-	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       版本 V1.1");
+	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       版本 V1.2");
 	printf("\n======\n");
 	printf("正在初始化...");
 	int initializatio = 0;
@@ -58,7 +60,7 @@ int main() {
 		printf("           | | \\ \\      / / | |  /  /            | |   | |    / _ \\    | |      | |      / /    | |\n");
 		printf("           | |  \\ \\    / /  | | |  |       ___   | |   | |   / /_\\ \\   | |      | |     / /     | |\n");
 		printf("           | |   \\ \\  / /   | |  \\  \\____  \\ \\___/ /   | |  |  ___  |  | |______| |    / /___   | |\n");
-		printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       版本 V1.1");
+		printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       版本 V1.2");
 		printf("\n======\n");
 		printf("初始化成功！\n\n");
 		system("ping localhost -n 2 > nul");
@@ -71,7 +73,7 @@ int main() {
 	printf("           | | \\ \\      / / | |  /  /            | |   | |    / _ \\    | |      | |      / /    | |\n");
 	printf("           | |  \\ \\    / /  | | |  |       ___   | |   | |   / /_\\ \\   | |      | |     / /     | |\n");
 	printf("           | |   \\ \\  / /   | |  \\  \\____  \\ \\___/ /   | |  |  ___  |  | |______| |    / /___   | |\n");
-	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       版本 V1.1");
+	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       版本 V1.2");
 	printf("\n======\n");
 	printf("\n正在检查更新...");
 	system("cls");
@@ -81,13 +83,13 @@ int main() {
 	printf("           | | \\ \\      / / | |  /  /            | |   | |    / _ \\    | |      | |      / /    | |\n");
 	printf("           | |  \\ \\    / /  | | |  |       ___   | |   | |   / /_\\ \\   | |      | |     / /     | |\n");
 	printf("           | |   \\ \\  / /   | |  \\  \\____  \\ \\___/ /   | |  |  ___  |  | |______| |    / /___   | |\n");
-	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       版本 v1.1");
+	printf("           |_|    \\_\\/_/    |_|   \\______|  \\_____/    |_|  |_|   |_|   \\________/    /______|  |_|\n\n                                                                                                       版本 v1.2");
 	printf("\n======\n");
 	if (update(updat) == -1) {
 		printf("检查更新出错\n从远程服务器获取版本文件失败。请联系开发者。\n是否访问官网？[Y/N]\n");
 		char a = getchar();
 		if (a == 'y' || a == 'Y') {
-			system("start http://www.mcjiaozi.icu");
+			system("start https://www.mcjiaozi.icu");
 		}
 		return -1;
 	}
@@ -95,7 +97,7 @@ int main() {
 		printf("检查更新出错\n无法读取缓存文件。请联系开发者\n是否访问官网？[Y/N]\n");
 		char a = getchar();
 		if (a == 'y' || a == 'Y') {
-			system("start http://www.mcjiaozi.icu");
+			system("start https://www.mcjiaozi.icu");
 		}
 		return -2;
 	}
@@ -103,7 +105,7 @@ int main() {
 		printf("检查更新出错\n客户端版本号不应大于最新版本号。请联系开发者\n是否访问官网？[Y/N]\n");
 		char a = getchar();
 		if (a == 'y' || a == 'Y') {
-			system("start http://www.mcjiaozi.icu");
+			system("start https://www.mcjiaozi.icu");
 		}
 		return -3;
 	}
@@ -123,7 +125,7 @@ int main() {
 			printf("\n正在下载在线更新程序...");
 			if (S_OK != URLDownloadToFile(NULL, "http://mcjiaozi.icu:26029/update/wh/onlineupdate.exe", "onlineupdate.exe", 0, 0)) {
 				printf("\n下载失败！\n正在尝试备用线路下载...");
-				if (S_OK != URLDownloadToFile(NULL, "http://www.mcjiaozi.icu/update/wh/onlineupdate.exe", "onlineupdate.exe", 0, 0)) {
+				if (S_OK != URLDownloadToFile(NULL, "https://github.com/JinJiaoZi/jinjiaozi.github.io/releases/download/Update/onlineupdate.exe", "onlineupdate.exe", 0, 0)) {
 					printf("\n下载失败！请重启或稍后再试，若问题仍然无法解决，请访问官网http://www.mcjiaozi.icu\n");
 					system("pause");
 					return -4;
@@ -158,7 +160,7 @@ int main() {
 		scanf_s("%d", &v);
 		switch (v) {
 		case 1:
-			system("explorer http://www.mcjiaozi.icu");
+			system("explorer https://www.mcjiaozi.icu");
 			printf("\n此时你的浏览器应已打开并跳转至官方网站。如果仍未跳转，请手动访问http://www.mcjiaozi.icu\n");
 			system("pause");
 			break;

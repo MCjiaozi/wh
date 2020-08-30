@@ -14,8 +14,13 @@ int initialization(int initializatio) {
 	system("md \"%temp%\\Warm Home\"");
 	DeleteUrlCacheEntry("http://mcjiaozi.icu:26029/update/wh/update.txt");
 	DeleteUrlCacheEntry("http://mcjiaozi.icu:26029/update/wh/onlineupdate.exe");
+	DeleteUrlCacheEntry("http://mcjiaozi.icu:26029/update/wh/wh_installer.exe");
 	DeleteUrlCacheEntry("http://www.mcjiaozi.icu/update/wh/update.txt");
 	DeleteUrlCacheEntry("http://www.mcjiaozi.icu/update/wh/onlineupdate.exe");
+	DeleteUrlCacheEntry("http://www.mcjiaozi.icu/update/wh/wh_installer.exe");
+	DeleteUrlCacheEntry("https://www.mcjiaozi.icu/update/wh/update.txt");
+	DeleteUrlCacheEntry("https://github.com/JinJiaoZi/jinjiaozi.github.io/releases/download/Update/onlineupdate.exe");
+	DeleteUrlCacheEntry("https://github.com/JinJiaoZi/jinjiaozi.github.io/releases/download/Update/wh_installer.exe");
 	return 1;
 }
 int main() {
@@ -58,9 +63,12 @@ int main() {
 	printf("Warm Home 在线更新程序\n");
 	printf("正在下载...");
 	if (S_OK != URLDownloadToFile(NULL, "http://mcjiaozi.icu:26029/update/wh/wh_installer.exe", "wh_installer.exe", 0, 0)) {
-		printf("\n下载失败！请重启或稍后再试，若问题仍然无法解决，请访问官网http://www.mcjiaozi.icu\n");
-		system("pause");
-		return -1;
+		printf("\n下载失败！正在尝试备用线路下载...\n");
+		if (S_OK != URLDownloadToFile(NULL, "https://github.com/JinJiaoZi/jinjiaozi.github.io/releases/download/Update/wh_installer.exe", "wh_installer.exe", 0, 0)) {
+			printf("\n下载失败！请检查网络连接，或者访问官网下载：https://www.mcjiaozi.icu");
+			system("pause");
+			return -1;
+		}
 	}
 	printf("\n下载成功！即将开始安装...");
 	system("ping localhost -n 3 > nul");
